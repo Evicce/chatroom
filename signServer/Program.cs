@@ -8,6 +8,7 @@ using System.Net.Sockets;
 using System.Threading;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using System.Data.SqlClient;
 
 namespace signServer
 {
@@ -44,6 +45,23 @@ namespace signServer
             if (user != null)
             {
                 
+                using (SqlConnection con=new SqlConnection(""))
+                {
+                    string strCmd = "insert into user_list values()";
+                    using (SqlCommand cmd = new SqlCommand(strCmd,con))
+                    {
+                        con.Open();
+                        int r = cmd.ExecuteNonQuery();
+                        if (r>0)
+                        {
+                            Console.WriteLine("a user signed");
+                        }
+                        else
+                        {
+                            Console.WriteLine("sign failed");
+                        }
+                    }
+                }
             }
         }
     }
