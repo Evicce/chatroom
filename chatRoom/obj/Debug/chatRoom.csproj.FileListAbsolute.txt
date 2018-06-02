@@ -1,0 +1,13 @@
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\bin\Debug\chatRoom.exe.config
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\bin\Debug\chatRoom.exe
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\bin\Debug\chatRoom.pdb
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.csprojAssemblyReference.cache
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.Form1.resources
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.Properties.Resources.resources
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.csproj.GenerateResource.cache
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.csproj.CoreCompileInputs.cache
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.csproj.CopyComplete
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.exe
+C:\Users\Evicce\source\repos\chatRoom\chatRoom\obj\Debug\chatRoom.pdb
