@@ -1,0 +1,9 @@
+C:\Users\Evicce\source\repos\chatRoom\signServer\bin\Debug\signServer.exe.config
+C:\Users\Evicce\source\repos\chatRoom\signServer\bin\Debug\signServer.exe
+C:\Users\Evicce\source\repos\chatRoom\signServer\bin\Debug\signServer.pdb
+C:\Users\Evicce\source\repos\chatRoom\signServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Evicce\source\repos\chatRoom\signServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Evicce\source\repos\chatRoom\signServer\obj\Debug\signServer.csproj.CoreCompileInputs.cache
+C:\Users\Evicce\source\repos\chatRoom\signServer\obj\Debug\signServer.csproj.CopyComplete
+C:\Users\Evicce\source\repos\chatRoom\signServer\obj\Debug\signServer.exe
+C:\Users\Evicce\source\repos\chatRoom\signServer\obj\Debug\signServer.pdb

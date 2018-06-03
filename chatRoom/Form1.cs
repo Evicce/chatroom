@@ -31,11 +31,14 @@ namespace chatRoom
 
         private void send(string text)
         {
-            IPAddress iP = IPAddress.Parse("	101.132.163.49");
-            IPEndPoint point = new IPEndPoint(iP, 3693);
+            string strIP = "101.132.163.49";
+            IPAddress iP = IPAddress.Parse(strIP.Trim());
+            IPEndPoint point = new IPEndPoint(iP, 3692);
             Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             socket.Connect(point);
             socket.Send(Encoding.UTF8.GetBytes(text));
+            socket.Shutdown(SocketShutdown.Both);
+            socket.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace chatRoomServer
         static void Main(string[] args)
         {
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress iP = IPAddress.Parse("127.0.0.1");
+            IPAddress iP = IPAddress.Parse("	172.19.205.120");
             IPEndPoint point = new IPEndPoint(iP, 3693);
             serverSocket.Bind(point);
             serverSocket.Listen(10);

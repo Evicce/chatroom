@@ -17,7 +17,8 @@ namespace signServer
         private static Socket serverSocket;
         static void Main(string[] args)
         {
-            IPAddress iP = IPAddress.Parse("127.0.0.1");
+            string strIp = "	172.19.205.120";
+            IPAddress iP = IPAddress.Parse(strIp.Trim());
             IPEndPoint point = new IPEndPoint(iP, 3692);
             serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             serverSocket.Bind(point);
@@ -41,24 +42,34 @@ namespace signServer
             byte[] bytesMessage = new byte[1000];
             int recieveNumber = clientSocket.Receive(bytesMessage);
             string message = Encoding.UTF8.GetString(bytesMessage, 0, recieveNumber);
-            User user = JsonConvert.DeserializeObject(message) as User;
+            Console.WriteLine(message);
+            User user = JsonConvert.DeserializeObject<User>(message);
+            Console.WriteLine(user.Account);
             if (user != null)
             {
 
-                using (SqlConnection con = new SqlConnection(""))
+                using (SqlConnection con = new SqlConnection(@"Data Source =iZunzhqtbslzqoZ\SQLEXPRESS; database=userList; user id=sa; pwd=Evicce123;"))
                 {
-                    string strCmd = "insert into user_list values(" + user.Account + "," + user.Name + "," + user.Password + ")";
+                    string strCmd = "insert into user_list values('" + user.Account + "','" + user.Name + "','" + user.Password + "')";
                     using (SqlCommand cmd = new SqlCommand(strCmd, con))
                     {
-                        con.Open();
-                        int r = cmd.ExecuteNonQuery();
-                        if (r > 0)
+                        try
                         {
-                            Console.WriteLine("a user signed");
+
+                            con.Open();
+                            int r = cmd.ExecuteNonQuery();
+                            if (r > 0)
+                            {
+                                Console.WriteLine("a user signed");
+                            }
+                            else
+                            {
+                                Console.WriteLine("sign failed");
+                            }
                         }
-                        else
+                        catch (Exception e)
                         {
-                            Console.WriteLine("sign failed");
+                            Console.WriteLine(e.Message);
                         }
                     }
                 }
