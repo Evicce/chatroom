@@ -44,15 +44,15 @@ namespace signServer
             User user = JsonConvert.DeserializeObject(message) as User;
             if (user != null)
             {
-                
-                using (SqlConnection con=new SqlConnection(""))
+
+                using (SqlConnection con = new SqlConnection(""))
                 {
-                    string strCmd = "insert into user_list values()";
-                    using (SqlCommand cmd = new SqlCommand(strCmd,con))
+                    string strCmd = "insert into user_list values(" + user.Account + "," + user.Name + "," + user.Password + ")";
+                    using (SqlCommand cmd = new SqlCommand(strCmd, con))
                     {
                         con.Open();
                         int r = cmd.ExecuteNonQuery();
-                        if (r>0)
+                        if (r > 0)
                         {
                             Console.WriteLine("a user signed");
                         }
